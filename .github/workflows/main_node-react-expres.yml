@@ -25,7 +25,6 @@ jobs:
 
       - name: npm install, build
         run: |
-          #npm cache clean --force
           npm install
           npm run build 
           cp -r dist/ server/public/
