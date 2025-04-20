@@ -6,8 +6,7 @@
   "scripts": {
     "dev": "tsx server/index.ts",
     "build": "vite build && tsc -b tsconfig.server.json",
-    "prestart": "npm install && npm install pm2 -g",
-    "start": "pm2 start server/public/dist/server/index.js --name 'tf-mvp'",
+    "start": "node server/public/dist/server/index.js",
     "lint": "eslint .",
     "preview": "vite preview",
     "test-db": "tsx scripts/test-user-ops.ts",
@@ -30,6 +29,7 @@
     "jsonwebtoken": "^9.0.2",
     "lucide-react": "^0.487.0",
     "mongodb": "^6.15.0",
+    "pm2": "^6.0.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-hook-form": "^7.55.0",
