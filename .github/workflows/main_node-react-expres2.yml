@@ -27,4 +27,4 @@ jobs:
 
       - name: Install dependencies on Azure Web App
         run: |
-          az webapp ssh --name NODE-REACT-EXPRES2 --resource-group YOUR_RESOURCE_GROUP --command "cd /home/site/wwwroot && npm install"
+          az webapp ssh --name NODE-REACT-EXPRES2 --resource-group mg_RESOURCE_group --command "cd /home/site/wwwroot && npm install"
