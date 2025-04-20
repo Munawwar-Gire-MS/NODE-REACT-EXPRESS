@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "tsx server/index.ts",
     "build": "vite build && tsc -b tsconfig.server.json",
-    "preinstall": "npm install",
+    "prestart": "npm install",
     "start": "node dist/server/index.js",
     "lint": "eslint .",
     "preview": "vite preview",
