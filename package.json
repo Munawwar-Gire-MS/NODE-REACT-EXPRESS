@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "tsx server/index.ts",
     "build": "vite build && tsc -b tsconfig.server.json",
-    "prestart": "npm install",
-    "start": "node dist/server/index.js",
+    "prestart": "npm install && npm install pm2 -g",
+    "start": "pm2 start dist/server/index.js --name 'tf-mvp'",
     "lint": "eslint .",
     "preview": "vite preview",
     "test-db": "tsx scripts/test-user-ops.ts",
