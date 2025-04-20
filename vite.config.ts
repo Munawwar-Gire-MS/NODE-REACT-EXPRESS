@@ -22,10 +22,9 @@ export default defineConfig({
         changeOrigin: true,
       },
     },
-    // Condition to allow requests in development (no restrictions on allowedHosts)
-    allowedHosts: process.env.NODE_ENV === 'production'
-      ? [process.env.VITE_ALLOWED_HOSTS] // Production hosts, from environment variables
-      : [],  // Empty for development (allow all hosts)
+    allowedHosts: [
+      'node-react-expres2.azurewebsites.net',  
+    ],
   },
   plugins: [
     react(),
