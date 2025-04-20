@@ -24,3 +24,10 @@ jobs:
           slot-name: 'Production'
           package: release.zip
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_CE49EA410BD544A993F7D9F9D67F7986 }}
+                
+      - name: Install dependencies and start with PM2
+        run: |
+          npm install
+          npm install pm2 -g
+          pm2 start dist/server/index.js --name 'tf-mvp'
+
