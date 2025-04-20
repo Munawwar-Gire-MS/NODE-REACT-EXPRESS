@@ -24,7 +24,3 @@ jobs:
           slot-name: 'Production'
           package: release.zip
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_CE49EA410BD544A993F7D9F9D67F7986 }}
-
-      - name: Install dependencies on Azure Web App
-        run: |
-          az webapp ssh --name NODE-REACT-EXPRES2 --resource-group mg_RESOURCE_group --command "cd /home/site/wwwroot && npm install"
