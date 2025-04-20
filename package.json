@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "tsx server/index.ts",
     "build": "vite build && tsc -b tsconfig.server.json",
+    "preinstall": "npm install",
     "start": "node dist/server/index.js",
-    "postinstall": "npm install",
     "lint": "eslint .",
     "preview": "vite preview",
     "test-db": "tsx scripts/test-user-ops.ts",
